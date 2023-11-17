@@ -1,4 +1,3 @@
-![tagir (1)](https://github.com/kaifarikman/medCare/assets/98696822/65083e07-de88-44b1-bfd9-8347dd346074)
 <h1 align="center">medCare - application for finding medications!</h1>
 
 ## Welcome and about
