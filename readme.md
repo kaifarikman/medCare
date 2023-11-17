@@ -1,4 +1,4 @@
-
+![tagir (1)](https://github.com/kaifarikman/medCare/assets/98696822/65083e07-de88-44b1-bfd9-8347dd346074)
 <h1 align="center">medCare - application for finding medications!</h1>
 
 ## Welcome and about
@@ -32,11 +32,11 @@
 
 ### Application developers on PyQt5. 
 
-<p align="center"><img  src="qt/qtimages/images/amir.jpeg" width="50%"></p>
+<p align="center"><img  src="qt/qtimages/images/amir.jpg" width="50%"></p>
 
 *****Amir*** decided to write the entire Backend of the application, writing various excellent working functions).**
 
-<p align="center"><img  src="qt/qtimages/images/tagir.jpeg" width="40%"></p>
+<p align="center"><img  src="qt/qtimages/images/tagir (1).jpg" width="40%"></p>
 
 *****Tagir*** - made a sweet and beautiful candy from tasteless caramel, completely designing it in QtDisigner and choosing colors together with the designer.**
 
@@ -48,11 +48,11 @@
 
 ### Creator of the idea
 
-<p align="center"><img  src="qt/qtimages/images/raul.jpeg" width="30%"></p>
+<p align="center"><img  src="qt/qtimages/images/raul.jpg" width="30%"></p>
 Raul - is the mastermind behind this wonderful application that you use to find medicines. Have fun using our brainchild!
 
 ### Artist
-<p align="center"><img  src="qt/qtimages/images/shakira.jpeg" width="30%"></p>
+<p align="center"><img  src="qt/qtimages/images/shakira (1).jpg" width="30%"></p>
 
 Shakira - a genius of design and more, she not only came up with a thousand and one ideas for other projects, but also kindly helped her friends!
 
