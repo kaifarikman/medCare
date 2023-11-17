@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/aboutnew.png</file>
+    <file>icons/capsule-pill.png</file>
+    <file>icons/about.png</file>
+    <file>icons/gear.png</file>
+    <file>icons/heart-pulse.png</file>
+    <file>icons/hospital.png</file>
+    <file>icons/person-circle.png</file>
+  </qresource>
+</RCC>

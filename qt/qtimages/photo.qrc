@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/tagir (1).jpg</file>
+    <file>images/tagir.jpg</file>
+    <file>images/raul.jpg</file>
+    <file>images/shakira (1).jpg</file>
+    <file>images/shakira.jpg</file>
+    <file>images/amir.jpg</file>
+    <file>images/wifi.jpg</file>
+    <file>images/no_wifi.jpg</file>
+    <file>images/fon.jpg</file>
+    <file>images/firstfon.jpg</file>
+    <file>images/cola (1).jpg</file>
+    <file>images/photo1698690526.jpeg</file>
+    <file>images/fonapteka2.jpg</file>
+    <file>images/fonapteka (1).jpg</file>
+    <file>images/fonapteka.jpg</file>
+    <file>images/apteka.jpeg</file>
+    <file>images/apteka2.jpg</file>
+  </qresource>
+</RCC>
