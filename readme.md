@@ -1,8 +1,9 @@
+
 <h1 align="center">medCare - application for finding medications!</h1>
 
 ## Welcome and about
 <h2>
-  Hi there <a href=https://github.com/kaifarikman" target="_blank">Amir</a> and <a href="https://github.com/firstinpython" target="_blank">Tagir</a><img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="30" width="30"/>
+  Hi there <a href="https://github.com/kaifarikman" target="_blank">Amir</a> and <a href="https://github.com/firstinpython" target="_blank">Tagir</a><img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="30" width="30"/>
 </h2>
 
 ## Yandex Lyceum participants with a PyQt5 project from Russia 🇷🇺
@@ -31,11 +32,11 @@
 
 ### Application developers on PyQt5. 
 
-<p align="center"><img  src="qt/qtimages/images/amir.jpg" width="50%"></p>
+<p align="center"><img  src="qt/qtimages/images/amir.jpeg" width="50%"></p>
 
 *****Amir*** decided to write the entire Backend of the application, writing various excellent working functions).**
 
-<p align="center"><img  src="qt/qtimages/images/tagir (1).jpg" width="40%"></p>
+<p align="center"><img  src="qt/qtimages/images/tagir.jpeg" width="40%"></p>
 
 *****Tagir*** - made a sweet and beautiful candy from tasteless caramel, completely designing it in QtDisigner and choosing colors together with the designer.**
 
@@ -47,11 +48,11 @@
 
 ### Creator of the idea
 
-<p align="center"><img  src="qt/qtimages/images/raul.jpg" width="30%"></p>
+<p align="center"><img  src="qt/qtimages/images/raul.jpeg" width="30%"></p>
 Raul - is the mastermind behind this wonderful application that you use to find medicines. Have fun using our brainchild!
 
 ### Artist
-<p align="center"><img  src="qt/qtimages/images/shakira (1).jpg" width="30%"></p>
+<p align="center"><img  src="qt/qtimages/images/shakira.jpeg" width="30%"></p>
 
 Shakira - a genius of design and more, she not only came up with a thousand and one ideas for other projects, but also kindly helped her friends!
 
@@ -70,5 +71,10 @@ pip install bs4
 pip install numpy
 pip install pandas
 pip install urllib3
-pytjon3 main.py
+pyton3 main.py
 ```
+
+
+## Download application
+
+<p>You can download applications by clicking on this <a href="">button</a></p>
