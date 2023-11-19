@@ -1,13 +1,13 @@
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, \
-    QGraphicsScene, QSizePolicy
+from PyQt5.QtWidgets import (QApplication, QMainWindow,
+                             QWidget, QLabel, QPushButton,
+                             QVBoxLayout, QHBoxLayout,
+                             QGraphicsScene)
 from PyQt5.QtGui import QPixmap, QFont
 from PyQt5.QtCore import Qt
 
-import datetime
 import sys
-from random import choice, randint
-import csv
+from random import choice
 import pandas as pd
 from urllib import request
 
@@ -15,9 +15,6 @@ import db
 from additional_files import email_sender
 from additional_files import test
 import for_pharmaciesDB
-
-import photo
-import icon
 
 
 class CreateCard(QMainWindow):
@@ -33,11 +30,11 @@ class CreateCard(QMainWindow):
 
         self.image_label = QLabel()  # Создаем QLabel для изображения
         self.set_image(self.image_path)
-        self.title_label1 = QLabel(split_title[0])  # Создаем QLabel для названия
-        self.title_label2 = QLabel(split_title[1])  # Создаем QLabel для названия
-        self.title_label3 = QLabel(split_title[2])  # Создаем QLabel для названия
-        self.title_label4 = QLabel(split_title[3])  # Создаем QLabel для названия
-        self.title_label5 = QLabel(split_title[4])  # Создаем QLabel для названия
+        self.title_label1 = QLabel(split_title[0])  # Создаем QLabel
+        self.title_label2 = QLabel(split_title[1])  # Создаем QLabel
+        self.title_label3 = QLabel(split_title[2])  # Создаем QLabel
+        self.title_label4 = QLabel(split_title[3])  # Создаем QLabel
+        self.title_label5 = QLabel(split_title[4])  # Создаем QLabel
 
         self.price_label = QLabel(self.price)  # Создаем QLabel для цены
         self.loyaout = QVBoxLayout(self)
@@ -45,7 +42,9 @@ class CreateCard(QMainWindow):
         self.button.setStyleSheet("border-radius:5px;")
         self.loyaout.addWidget(self.button, alignment=Qt.AlignCenter)
 
-        self.button.clicked.connect(self.open_window)  # Подключаем обработчик сигнала clicked
+        self.button.clicked.connect(
+            self.open_window
+        )  # Подключаем обработчик сигнала clicked
         self.add_widgets()
 
     def add_widgets(self):
@@ -67,11 +66,14 @@ class CreateCard(QMainWindow):
 
     def set_image(self, image_path):
         '''Данная функция загружает изображение из указанного пути,
-        обрабатывает его и устанавливает как картинку для виджета image_label'''
+        обрабатывает его и устанавливает как картинку для
+        виджета image_label'''
         try:
             data = request.urlopen(image_path).read()
-        except:
-            data = request.urlopen('https://sklad-vlk.ru/d/cml_b29980cb_b3733bd1.jpg').read()
+        except Exception:
+            data = request.urlopen(
+                'https://sklad-vlk.ru/d/cml_b29980cb_b3733bd1.jpg'
+            ).read()
         pixmap = QPixmap()
         pixmap.loadFromData(data)
         pixmap = pixmap.scaled(200, 200)
@@ -118,13 +120,19 @@ class CreateCard(QMainWindow):
         font_price = QFont("Arial", 10)
         self.new_window.product_priceLabel.setFont(font_price)
         self.new_window.product_photo.setScene(product_photo)
-        self.new_window.product_from_whatLabel.setText(self.information_of_pill[3])
+        self.new_window.product_from_whatLabel.setText(
+            self.information_of_pill[3]
+        )
         font_infplill3 = QFont("Arial", 10)
         self.new_window.product_from_whatLabel.setFont(font_infplill3)
-        self.new_window.product_analogLabel.setText(self.information_of_pill[4])
+        self.new_window.product_analogLabel.setText(
+            self.information_of_pill[4]
+        )
         font_pill4 = QFont("Arial", 10)
         self.new_window.product_analogLabel.setFont(font_pill4)
-        self.new_window.product_informationLabel.setText(self.information_of_pill[5])
+        self.new_window.product_informationLabel.setText(
+            self.information_of_pill[5]
+        )
         font_pill5 = QFont("Arial", 10)
         self.new_window.product_informationLabel.setFont(font_pill5)
 
@@ -160,7 +168,7 @@ class TryOpen(QWidget):
                 card = CreateCard(lst[ind])
                 row_layout.addWidget(card)  # Добавляем карточку в текущий ряд
                 ind += 1
-            layout.addLayout(row_layout)  # Добавляем текущий ряд в основной QVBoxLayout
+            layout.addLayout(row_layout)  # Добавляем текущий ряд в QVBoxLayout
         widget = QWidget()
         widget.setLayout(layout)
         return widget
@@ -225,7 +233,7 @@ class MainApp(QWidget):
                 card = CreateCard(lst[ind])
                 row_layout.addWidget(card)  # Добавляем карточку в текущий ряд
                 ind += 1
-            layout.addLayout(row_layout)  # Добавляем текущий ряд в основной QVBoxLayout
+            layout.addLayout(row_layout)  # Добавляем текущий ряд в QVBoxLayout
         widget = QWidget()
         widget.setLayout(layout)
         return widget
@@ -252,7 +260,7 @@ class MedCare(QMainWindow):
             self.data = db.get_user(login, password)
             self.main_app()
         else:
-            self.errorLabel.setText('Неправильный логин или пароль!')  # нужен вывод на экран
+            self.errorLabel.setText('Неправильный логин или пароль!')
 
     def check_signing(self):
         login = self.LoginEdit.text()
@@ -282,7 +290,9 @@ class MedCare(QMainWindow):
         flag = True
         if test.check_mail(mail) != 'ok':
             errors = test.check_mail(mail)
-            s = f'''Ваша почта не подходит нашим стандартам:\n{''.join(errors)}'''.strip()
+            s = (f'''
+            Ваша почта не подходит нашим стандартам:\n{''.join(errors)}'''
+                 .strip())
             st = self.registration_errorLabel.text() + s
             self.registration_errorLabel.setText(st)  # нужен вывод на экран
             flag = False
@@ -307,13 +317,14 @@ class MedCare(QMainWindow):
             flag = False
 
         if not flag:
-            st = self.registration_errorLabel.text() + '\nВы не можете быть авторизованы в приложение medCare\n'
+            st = (self.registration_errorLabel.text() +
+                  '\nВы не можете быть авторизованы в приложение medCare\n')
             self.registration_errorLabel.setText(st)  # нужен вывод на экран
         else:
             uic.loadUi('qt/checker.ui', self)
             self.data = (name, surname, mail, password)
-            self.program_mail_code = email_sender.create_authentication_password()
-            email_sender.send_email(mail, self.program_mail_code)
+            self.program_code = email_sender.create_authentication_password()
+            email_sender.send_email(mail, self.program_code)
             self.checker_register.clicked.connect(self.register)
             self.checker_cancelButton.clicked.connect(self.sign_up)
 
@@ -325,9 +336,14 @@ class MedCare(QMainWindow):
             if db.add_user(data):
                 self.start()
             else:
-                self.error_label.setText('Аккаунт на такую почту уже существует. Перерегистрируйтесь')
+                self.error_label.setText(
+                    'Аккаунт на такую почту уже существует. '
+                    'Перерегистрируйтесь'
+                )
         else:
-            self.error_label.setText('Код введен неверно. Зарегистрируйтесь заново!')
+            self.error_label.setText(
+                'Код введен неверно. Зарегистрируйтесь заново!'
+            )
 
     def user_profile_function(self):
         uic.loadUi('qt/profile.ui', self)
@@ -349,7 +365,9 @@ class MedCare(QMainWindow):
         self.illness_categories = list()
         for i in range(1, 9):
             cb = eval(f'self.checkBox_{i}')
-            cb.stateChanged.connect(lambda state, checkbox=cb: self.add_box(state, checkbox))
+            cb.stateChanged.connect(
+                lambda state, checkbox=cb: self.add_box(state, checkbox)
+            )
 
         self.illness_findButton.clicked.connect(self.find_categories)
 
@@ -392,10 +410,14 @@ class MedCare(QMainWindow):
             self.settings_nameErrorLabel.setText('Введите адекватное имя')
             flag = False
         if not test.check_name_surname(new_surname) or new_surname == '':
-            self.settings_surnameErrorLabel.setText('Введите адекватную фамилию')
+            self.settings_surnameErrorLabel.setText(
+                'Введите адекватную фамилию'
+            )
             flag = False
         if town.lower() != 'набережные челны':
-            self.settings_townErrorLabel.setText('Данное приложение работает только в г.Набережные Челны.')
+            self.settings_townErrorLabel.setText(
+                'Данное приложение работает только в г.Набережные Челны.'
+            )
             flag = False
         if flag:
             data = self.data
@@ -433,3 +455,4 @@ if __name__ == '__main__':
         ex = WiFiError()
         ex.show()
         sys.exit(app.exec_())
+        
