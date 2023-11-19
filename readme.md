@@ -73,8 +73,3 @@ pip install pandas
 pip install urllib3
 pyton3 main.py
 ```
-
-
-## Download application
-
-<p>You can download applications by clicking on this <a href="">button</a></p>
