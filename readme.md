@@ -71,5 +71,5 @@ pip install bs4
 pip install numpy
 pip install pandas
 pip install urllib3
-pyton3 main.py
+python3 main.py
 ```
